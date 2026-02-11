@@ -23,24 +23,24 @@ wheels/
 *.egg
 
 # ML / Experiments
-datasets/
-checkpoints/
-runs/
-wandb/
-mlruns/
-*.ckpt
-*.pt
-*.pth
-*.onnx
-*.log
-*.tensorboard
+# datasets/
+# checkpoints/
+# runs/
+# wandb/
+# mlruns/
+# *.ckpt
+# *.pt
+# *.pth
+# *.onnx
+# *.log
+# *.tensorboard
 
 # Medical / Privacy
-**/raw_data/
-**/private/
-**/PHI/
-*patient*
-*clinical*
+# **/raw_data/
+# **/private/
+# **/PHI/
+# *patient*
+# *clinical*
 
 # IDEs
 .vscode/
