@@ -1,0 +1,104 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+
+# VS Code
+.vscode/
+
+# Data and ML artifacts
+data/
+datasets/
+raw_data/
+**/raw_data/
+private/
+**/private/
+PHI/
+**/PHI/
+
+# Experiment tracking
+checkpoints/
+runs/
+wandb/
+mlruns/
+tensorboard/
+*.tensorboard
+
+# Model weights and exports
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.tflite
+
+# Logs
+*.log
+logs/
+
+# Exports that may contain patient metadata
+*patient*.csv
+*clinical*.csv
+*patient*.xlsx
+*clinical*.xlsx
+
+# OS files
+.DS_Store
+Thumbs.db
