@@ -1,7 +1,0 @@
-name: aptos
-type: fundus
-path: /path/to/aptos
-image_size: 224
-quality_filter:
-  enabled: true
-  min_sharpness: 0.3

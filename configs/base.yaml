@@ -1,3 +1,0 @@
-project: RetinaViT
-seed: 42
-output_dir: ./runs
