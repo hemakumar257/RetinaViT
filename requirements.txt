@@ -1,0 +1,14 @@
+black
+isort
+flake8
+pytest
+pre-commit
+pyyaml
+torch
+torchvision
+timm
+numpy
+pandas
+matplotlib
+scikit-learn
+opencv-python

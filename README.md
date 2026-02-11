@@ -30,7 +30,7 @@ pip install -r requirements.txt
 Run tests:
 
 ```bash
-./scripts/run_tests.sh
+pytest tests/
 ```
 
 ## Roadmap

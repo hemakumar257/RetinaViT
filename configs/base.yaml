@@ -1,0 +1,4 @@
+project: RetinaViT
+version: 0.1.0
+device: auto
+seed: 42
