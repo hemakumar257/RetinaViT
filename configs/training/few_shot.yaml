@@ -1,0 +1,9 @@
+training:
+  optimizer: adamw
+  learning_rate: 1e-5
+  batch_size: 16
+  epochs: 50
+  few_shot:
+    n_way: 5
+    k_shot: 5
+    q_queries: 15

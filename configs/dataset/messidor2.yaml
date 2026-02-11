@@ -1,12 +1,11 @@
 dataset:
-  name: aptos2019
+  name: messidor2
   image_size: 224
   normalization:
     mean: [0.485, 0.456, 0.406]
     std: [0.229, 0.224, 0.225]
   splits:
-    train: train.csv
-    test: test.csv
+    all: messidor_data.csv
 
 preprocessing:
   apply_circular_crop: true
@@ -15,7 +14,7 @@ preprocessing:
 
 quality_assessment:
   enable_quality_labels: true
-  quality_label_csv: "experiments/quality/aptos2019_quality_labeled.csv"
+  quality_label_csv: "experiments/quality/messidor2_quality_labeled.csv"
 
 augmentation:
   enable_medical_aug: true

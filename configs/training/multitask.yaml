@@ -1,0 +1,31 @@
+training:
+  learning_rate: 1e-4
+  batch_size: 16
+  multitask:
+    weighting:
+      strategy: "uncertainty"
+      initial_weights:
+        classification: 1.0
+        segmentation: 1.0
+    losses:
+      classification: "focal"
+      segmentation: "dice_boundary"
+      quality: "reconstruction"
+  curriculum:
+    enable: true
+    stages:
+      - epoch_end: 10
+        weights: {Good: 1.0, Fair: 0.5, Poor: 0.1}
+      - epoch_end: 30
+        weights: {Good: 1.0, Fair: 1.0, Poor: 0.5}
+      - epoch_end: 100
+        weights: {Good: 1.0, Fair: 1.0, Poor: 1.0}
+  hpo:
+    enable: true
+    study_name: "retinavit_multitask_hpo"
+    n_trials: 30
+    metric: "val_kappa"
+  model:
+    num_layers: 2
+    num_heads: 8
+    causal: true

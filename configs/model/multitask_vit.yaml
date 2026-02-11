@@ -1,0 +1,12 @@
+model:
+  name: "multitask_vit_base"
+  backbone:
+    name: "vit_base_patch16_224"
+    image_size: [224, 224]
+    pretrained: true
+    num_classes: 5
+  multitask:
+    num_seg_classes: 1
+    lesion_attention: true
+    inter_layers: [2, 5, 8, 11]
+    decoder_channels: [256, 128, 64, 32]

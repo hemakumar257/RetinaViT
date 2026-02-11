@@ -22,6 +22,10 @@ RetinaViT is a research-grade codebase for developing few-shot, quality-aware Vi
 Create a Python virtual environment and install development dependencies:
 
 ```bash
+# Run the setup script
+bash scripts/setup_env.sh
+
+# Or manually:
 python -m venv .venv
 source .venv/bin/activate     # or .venv\Scripts\activate on Windows
 pip install -r requirements.txt
@@ -31,6 +35,25 @@ Run tests:
 
 ```bash
 pytest tests/
+```
+
+## Datasets
+The project utilizes three primary datasets for training and validation:
+- **APTOS 2019**: Blindness detection classification.
+- **MESSIDOR-2**: Diabetic retinopathy screening.
+- **IDRiD**: Segmentation and grading.
+
+**Note**: Raw data is not included in this repository due to size and licensing. Please refer to [docs/datasets/licenses.md](docs/datasets/licenses.md) and the individual dataset documentation in `docs/datasets/` for acquisition instructions.
+
+## Experiment Tracking
+We use Weights & Biases (W&B) and MLflow for tracking.
+- **W&B**: Set your API key: `export WANDB_API_KEY=your_key`. Runs in `offline` mode by default if no key is found.
+- **MLflow**: Logs are stored locally in the `mlruns/` directory by default.
+
+To verify the integration, run the dummy training script:
+```bash
+export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+python src/retinavit/training/train_dummy.py
 ```
 
 ## Roadmap

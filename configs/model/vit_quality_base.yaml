@@ -1,6 +1,6 @@
 model:
   name: "vit_base"
-  type: "standard"
+  type: "quality_aware"
   image_size: [512, 512]
   patch_size: 16
   embed_dim: 768
@@ -11,9 +11,9 @@ model:
   num_classes: 5
   pretrained: true
   quality_aware:
-    enable: false
+    enable: true
     use_quality_token: true
     use_attention_modulation: true
     use_adaptive_patch_dropout: true
     patch_dropout_base_prob: 0.1
-    patch_dropout_poor_multiplier: 2.0
+    patch_dropout_poor_multiplier: 3.0

@@ -1,0 +1,14 @@
+model:
+  name: "vit_large"
+  type: "standard"
+  image_size: [512, 512]
+  patch_size: 16
+  embed_dim: 1024
+  depth: 24
+  num_heads: 16
+  mlp_dim: 4096
+  dropout: 0.1
+  num_classes: 5
+  pretrained: true
+  quality_aware:
+    enable: false

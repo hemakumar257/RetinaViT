@@ -1,0 +1,26 @@
+model:
+  name: "protovit_base"
+  type: "fewshot"
+  backbone:
+    name: "vit_base"
+    image_size: [512, 512]
+    patch_size: 16
+    embed_dim: 768
+    depth: 12
+    num_heads: 12
+    mlp_dim: 3072
+    dropout: 0.1
+    pretrained: true
+    quality_aware:
+      enable: true
+      use_quality_token: true
+      use_attention_modulation: true
+
+  protovit:
+    feature_type: "class_token" # options: "class_token", "patch_pooled"
+    metric_type: "euclidean"     # options: "euclidean", "cosine", "mlp"
+    cross_attention:
+      enable: true
+      num_layers: 2
+      num_heads: 8
+      dropout: 0.1

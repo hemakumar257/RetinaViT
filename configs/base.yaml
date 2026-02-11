@@ -1,4 +1,9 @@
-project: RetinaViT
-version: 0.1.0
-device: auto
 seed: 42
+device: cuda
+num_workers: 4
+paths:
+  data_dir: datasets/
+  logs_dir: runs/
+  checkpoints_dir: checkpoints/
+  mlruns_dir: mlruns/
+project_name: RetinaViT
